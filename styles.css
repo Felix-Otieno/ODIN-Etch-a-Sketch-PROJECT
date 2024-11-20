@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+#resizeButton {
+    margin: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#resizeButton:hover {
+    background-color: #45a049;
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 960px;
+    height: 960px;
+}
+
+.grid-container div {
+    background-color: #ccc;
+    margin: 1px;
+    flex: 0 0 calc(100% / 16);  /* This divides the container into 16 equal parts */
+    height: calc(100% / 16);
+    transition: background-color 0.2s ease;
+}
